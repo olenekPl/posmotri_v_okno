@@ -54,7 +54,7 @@ ol {
 .search-form {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 .content__list {
@@ -280,6 +280,7 @@ input[type="text"]:has(:focus-visible) + span {
   border-style: solid;
   border-color: #FFFFFF;
   border-radius: 0%;
+  outline-offset: 1px;
 } 
 
 input[type="text"]:active + span {
@@ -312,6 +313,7 @@ input[type="text"]:hover + span {
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .search-form__submit-button:active {
@@ -329,6 +331,7 @@ input[type="text"]:hover + span {
 
 .search-form__submit-button:focus-visible {
   outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .content__card-link_current {
@@ -346,6 +349,7 @@ input[type="text"]:hover + span {
 
 .content__video-card:focus-visible {
   outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .more-button:active {
@@ -363,4 +367,9 @@ input[type="text"]:hover + span {
 
 .more-button:focus-visible {
   outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__submit-button {
+  align-self: end;
 }
