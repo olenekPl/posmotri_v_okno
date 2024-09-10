@@ -45,6 +45,7 @@ ol {
   max-width: 1140px;
   width: 100%;
   padding: 133px 30px;
+  margin: 0 auto;
 }
 
 .result {
@@ -148,6 +149,10 @@ ol {
   flex-grow: 1;
   flex-basis: 0;
   overflow: hidden;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  max-width: 200px;
+  width: 100%;
 }
 
 .content__video-card-description {
@@ -179,12 +184,15 @@ ol {
 }
 
 .search-form__label {
+  display: flex;
   width: fit-content;
+  align-items: center;
+  gap: 5px;
 }
 
 .search-form__textfield {
   appearance: none;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: inherit;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -197,8 +205,10 @@ ol {
   align-items: center;
   padding: 0px;
   gap: 10px;
-  width: 225px;
-  height: 27px;
+  min-width: 225px;
+  width: 100%;
+  min-height: 27px;
+  height: 100%;
   border-width: 1px 0px;
   border-style: solid;
   border-color: #FFFFFF;
@@ -228,7 +238,7 @@ placeholder {
 }
 
 .search-form__pseudo-checkbox {
-  display: inline-block;
+  display: block;
   box-sizing: border-box;
   width: 19px;
   height: 19px;
@@ -254,8 +264,8 @@ button {
   background-color: transparent;
   display: inline-block;
   box-sizing: border-box;
-  width: 194px;
-  height: 34px;
+  min-width: 194px;
+  min-height: 34px;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -267,31 +277,21 @@ button {
 }
 
 .more-button {
-  width: 399px;
-  height: 34px;
+  min-width: 399px;
+  min-height: 34px;
 }
 
-input[type="text"]:focus + span {
+.search-form__textfield:focus {
   outline: none;
-}
-
-input[type="text"]:has(:focus-visible) + span {
-  border-width: 1px 0px;
-  border-style: solid;
-  border-color: #FFFFFF;
-  border-radius: 0%;
-  outline-offset: 1px;
 } 
 
-input[type="text"]:active + span {
-  border: 1px solid #FFFFFF;
-  border-radius: 0%;
+.search-form__textfield:active {
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border: none;
 }
 
-input[type="text"]:hover + span {
-  border-width: 1px 0px;
-  border-style: solid;
-  border-color: #FFFFFF;
+.search-form__textfield:hover {
   cursor: auto;
 }
 
@@ -305,69 +305,50 @@ input[type="text"]:hover + span {
   cursor: pointer;
 }
 
-.search-form__label-text:hover {
-  border-bottom: 1px solid #fff;
-  max-width: fit-content;
-  cursor: pointer;
-}
-
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
 
-.search-form__submit-button:active {
-  box-shadow: inset 0 0 0 100px rgb(255 255 255 / 0.1);
+.button:active {
+  background-color: #545050;
   text-decoration: none;
 }
 
-.search-form__submit-button:hover {
+.button:hover {
   text-decoration: underline;
 }
 
-.search-form__submit-button:focus {
+.button:focus {
   outline: none;
 }
 
-.search-form__submit-button:focus-visible {
+.button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
 
 .content__card-link_current {
-  box-shadow: inset 0 0 0 100px rgb(255 255 255 / 0.1);
+  background-color: #545050;
   text-decoration: none;
 }
 
-.content__video-card:hover {
+.content__card-link:hover {
   text-decoration: underline;
 }
 
-.content__video-card:focus {
+.content__card-link:focus {
   outline: none;
 }
 
-.content__video-card:focus-visible {
+.content__card-link:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
 
-.more-button:active {
-  box-shadow: inset 0 0 0 100px rgb(255 255 255 / 0.1);
+.content__card-link:active {
+  background-color: #545050;
   text-decoration: none;
-}
-
-.more-button:hover {
-  text-decoration: underline;
-}
-
-.more-button:focus {
-  outline: none;
-}
-
-.more-button:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
 }
 
 .search-form__submit-button {
