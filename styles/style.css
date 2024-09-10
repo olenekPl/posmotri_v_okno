@@ -9,6 +9,7 @@ html {
 }
 
 .page {
+  display: flex;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -16,6 +17,8 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -188,6 +191,7 @@ ol {
   width: fit-content;
   align-items: center;
   gap: 5px;
+  cursor: pointer;
 }
 
 .search-form__textfield {
@@ -299,10 +303,8 @@ button {
   text-decoration: none;
 }
 
-.search-form__pseudo-checkbox:hover + span {
-  border-bottom: 1px solid #fff;
-  max-width: fit-content;
-  cursor: pointer;
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
 }
 
 .search-form__label:has(:focus-visible) {
